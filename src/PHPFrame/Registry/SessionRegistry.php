@@ -112,7 +112,7 @@ class PHPFrame_SessionRegistry extends PHPFrame_Registry
         } else {
             $uri                  = new PHPFrame_URI($base_url);
             $this->_cookie_domain = $uri->getHost();
-            $this->_cookie_path   = $uri->getDirname();
+            $this->_cookie_path   = "/";
         }
 
         // Set custom session name
