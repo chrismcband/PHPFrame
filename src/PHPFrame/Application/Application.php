@@ -945,8 +945,8 @@ class PHPFrame_Application extends PHPFrame_Observer
                 $document->applyTheme($theme_url, $theme_path, $this);
             } else {
                 // Append system events when no theme
-                $document->prependBody($renderer->render($sysevents));
-                $sysevents->clear();
+//                $document->prependBody($renderer->render($sysevents));
+//                $sysevents->clear();
 
                 // Set "body only" mode for AJAX requests when HTML document
                 $document->bodyOnly(true);
