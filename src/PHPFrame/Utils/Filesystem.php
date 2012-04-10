@@ -424,7 +424,7 @@ class PHPFrame_Filesystem
             finfo_close($finfo);
 
             $mime = strtolower($mime);
-            $pattern = "/^([a-z0-9]+\/[a-z0-9\-\.]+);\s+charset=(.*)$/";
+            $pattern = "/^([a-z0-9]+\/[a-z0-9\-\.]+);\s+(charset=(.*))?$/";
             if (!preg_match($pattern, $mime, $matches)) {
                 throw new Exception("Error parsing MIME type.");
             }
