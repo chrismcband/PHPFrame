@@ -87,7 +87,7 @@ class PHPFrame_InputFilter
         foreach ($array as $key=>$value) {
             if (is_array($value)) {
                 $filtered[$key] = $this->_processArray($value);
-            } else if (!is_object($value) && $key == 'email') {
+            } else if (!is_object($value) && $key.'' == 'email') {
                 $filtered[$key] = $this->_processEmail($value);
             } elseif (!is_object($value) && !is_resource($value)) {
                 $filtered[$key] = $this->_processString($value);
