@@ -157,7 +157,9 @@ class PHPFrame_CLIClient extends PHPFrame_Client
             }
 
             foreach ($result->args["params"] as $param) {
-                parse_str($param, $param_pair);
+                $param_split = explode('=', $param);
+                $param_pair = array($param_split[0]=>$param_split[1]);
+//                parse_str($param, $param_pair);
                 foreach ($param_pair as $param_key=>$param_value) {
                     $request->param($param_key, $param_value);
                 }
