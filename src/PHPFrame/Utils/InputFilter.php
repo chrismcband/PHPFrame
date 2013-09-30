@@ -87,6 +87,8 @@ class PHPFrame_InputFilter
         foreach ($array as $key=>$value) {
             if (is_array($value)) {
                 $filtered[$key] = $this->_processArray($value);
+            } else if (!is_object($value) && $key == 'email') {
+                $filtered[$key] = $this->_processEmail($value);
             } elseif (!is_object($value) && !is_resource($value)) {
                 $filtered[$key] = $this->_processString($value);
             } else {
@@ -108,6 +110,37 @@ class PHPFrame_InputFilter
     private function _processString($str)
     {
         $str = urldecode($str);
+
+        $patterns = array();
+        $replacements = array();
+
+        foreach ($this->_tag_blacklist as $tag) {
+            $patterns[] = "/<".$tag.".*(\/>|<\/".$tag.">)/is";
+            $replacements[] = "";
+        }
+
+        foreach ($this->_attr_blacklist as $attr) {
+            $patterns[] = "/\s?$attr=['\"]?[^\s'\">]+['\"]?/is";
+            $replacements[] = "";
+        }
+
+        $patterns[] = "/<(\?|%)(php)?.*(\?|%)>/is";
+        $replacements[] = "";
+
+        return trim(preg_replace($patterns, $replacements, $str));
+    }
+
+    /**
+     * Process email string
+     *
+     * @param string $email The email to filter
+     *
+     * @return string
+     * @since 1.0
+     */
+    private function _processEmail($email)
+    {
+        $str = filter_var($email, FILTER_VALIDATE_EMAIL);
 
         $patterns = array();
         $replacements = array();
