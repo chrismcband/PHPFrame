@@ -184,11 +184,11 @@ class PHPFrame
         $lib_dir = self::dataDir().DS."lib";
 
         if ($class_name == "PHPMailer") {
-            $file_path = "phpmailer".DS."phpmailer.php";
+            $file_path = "phpmailer".DS."class.phpmailer.php";
             include $lib_dir.DS.$file_path;
             return;
         } elseif ($class_name == "SMTP") {
-            $file_path = "phpmailer".DS."smtp.php";
+            $file_path = "phpmailer".DS."class.smtp.php";
             include $lib_dir.DS.$file_path;
             return;
         }
