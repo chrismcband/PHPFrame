@@ -56,6 +56,12 @@ class PHPFrame_HTMLDocument extends PHPFrame_XMLDocument
      */
     private $_style_sheets = array();
     /**
+     * An array containing link tags.
+     *
+     * @var array
+     */
+    private $_links = array();
+    /**
      * An array containing links to RSS/Atom feeds.
      *
      * @var array
@@ -136,6 +142,11 @@ class PHPFrame_HTMLDocument extends PHPFrame_XMLDocument
 
             // Add content attribute
             $this->addNodeAttr($meta_node, "content", $meta_tag["content"]);
+        }
+
+        // Add links
+        foreach ($this->_links as $link) {
+            $this->addNode("link", $head_node, $link);
         }
 
         // Add feed links
@@ -352,6 +363,22 @@ class PHPFrame_HTMLDocument extends PHPFrame_XMLDocument
             "href"  => (string) $href,
             "type"  => (string) $type,
             "media" => (string) $media
+        );
+    }
+
+    /**
+     * Attach link tag in head.
+     *
+     * @param string $href  The relative or absolute URL to the link source.
+     * @param string $type  The link type. Default is text/css.
+     * @param string $rel   The rel attribute for the link, default stylesheet.
+     */
+    public function addLink($href, $type="text/css", $rel="stylesheet")
+    {
+        $this->_links[] = array(
+            "rel"   => $rel,
+            "href"  => $href,
+            "type"  => $type
         );
     }
 
