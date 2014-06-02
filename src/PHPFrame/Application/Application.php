@@ -268,7 +268,7 @@ class PHPFrame_Application extends PHPFrame_Observer
 
         // require the file if it exists
         if (is_file($file_path)) {
-            @include $file_path;
+            include $file_path;
             return;
         }
 
@@ -283,7 +283,8 @@ class PHPFrame_Application extends PHPFrame_Observer
             );
 
             foreach ($iterator as $file) {
-                if (in_array(end(explode('.', $file->getFileName())), $filter)) {
+                $file_split = explode('.', $file->getFileName());
+                if (in_array(end($file_split), $filter)) {
                     $file_name_no_ext = substr(
                         $file->getFileName(),
                         0,
