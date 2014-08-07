@@ -686,6 +686,7 @@ abstract class PHPFrame_Database extends PHPFrame_Subject
     public function close()
     {
         // unset PDO
+        $this->_stmt = null;
         $this->_pdo = null;
     }
 
