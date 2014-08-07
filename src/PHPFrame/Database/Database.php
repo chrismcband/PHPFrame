@@ -261,6 +261,17 @@ abstract class PHPFrame_Database extends PHPFrame_Subject
     }
 
     /**
+     * Removes a database instance by dsn.
+     * @param $dsn      A database source name.
+     */
+    public static function removeInstance($dsn)
+    {
+        if (isset(self::$_instances[$dsn])) {
+            unset(self::$_instances[$dsn]);
+        }
+    }
+
+    /**
      * Create PDO object to represent db connection
      *
      * @return void
