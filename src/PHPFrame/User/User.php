@@ -63,7 +63,7 @@ class PHPFrame_User extends PHPFrame_PersistentObject
             "email",
             null,
             false,
-            new PHPFrame_EmailFilter(array("min_length"=>7, "max_length"=>100))
+            new PHPFrame_EmailFilter(array("min_length"=>7, "max_length"=>254))
         );
         $this->addField(
             "password",
