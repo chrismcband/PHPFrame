@@ -1,3 +1,0 @@
-<script type="text/javascript" charset="utf-8">
-alert('I am the bad guy too!!');
-</script>

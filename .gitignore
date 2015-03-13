@@ -1,6 +1,7 @@
 *.swp
 .DS_Store
 .gitignore
+*.iml
 var/
 tmp/
 tests/PHPFrame/Mapper/test.sqlite
