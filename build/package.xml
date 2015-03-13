@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package 
+	packagerversion="1.8.1" 
+	version="2.0" 
+	xmlns="http://pear.php.net/dtd/package-2.0" 
+	xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     
+	     http://pear.php.net/dtd/tasks-1.0.xsd     
+	     http://pear.php.net/dtd/package-2.0     
+	     http://pear.php.net/dtd/package-2.0.xsd">
+	     
+ <name>##PROJECT_NAME##</name>
+ <channel>##CHANNEL##</channel>
+ <summary>##SUMMARY##</summary>
+ <description>##DESCRIPTION##</description>
+ <lead>
+  <name>##LEAD_NAME##</name>
+  <user>##LEAD_USER##</user>
+  <email>##LEAD_EMAIL##</email>
+  <active>##LEAD_ACTIVE##</active>
+ </lead>
+ <date>##DATE##</date>
+ <time>##TIME##</time>
+ <version>
+  <release>##RELEASE_VERSION##</release>
+  <api>##API_VERSION##</api>
+ </version>
+ <stability>
+  <release>##RELEASE_STABILITY##</release>
+  <api>##API_STABILITY##</api>
+ </stability>
+ <license uri="##LICENSE_URI##">##LICENSE##</license>
+ <notes>##NOTES##</notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" name="PHPFrame/Application/Components.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Application/FrontController.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Application/Pathway.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Application/Permissions.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Application/Response.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Application/Sysevents.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Application/Widgets.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Base/Array.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Base/Date.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Base/Number.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Base/Observer.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Base/Singleton.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Base/StdObject.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Base/String.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Base/Subject.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Client/CLI.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Client/Default.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Client/IClient.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Client/Mobile.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Client/XMLRPC.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Config/Config.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/Database.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/Field.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/IdObject.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/Row.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/RowCollection.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/DBLIB.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/Firebird.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/IBM.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/Informix.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/MySQL.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/ODBC.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/Oracle.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/PgSQL.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Database/DSN/SQLite.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Debug/Informer.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Debug/Logger.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Debug/Profiler.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Document/Document.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Document/HTML.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Document/Plain.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Document/RPC.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Document/XML.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Exception/Database.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Exception/Error.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Exception/Exception.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Exception/Filesystem.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Exception/Handler.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Exception/IMAP.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Exception/XMLRPC.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/HTML/HTML.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Lang/en-GB.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Mail/IMAP.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Mail/Mailer.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/MVC/ActionController.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/MVC/Factory.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/MVC/Model.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/MVC/View.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Registry/Application.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Registry/Registry.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Registry/Request.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Registry/Session.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/User/Helper.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/User/OpenID.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/User/User.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Utils/Crypt.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Utils/Exec.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Utils/Filesystem.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Utils/Filter.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Utils/Image.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Utils/Rewrite.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame/Utils/URI.php" role="php" />
+   <file baseinstalldir="/" name="PHPFrame.php" role="php" />
+   
+   <file baseinstalldir="/" name="config.xml" role="data" />
+   <file baseinstalldir="/" name="CLI_Tool.sql" role="data" />
+   <file baseinstalldir="/" name="CREDITS" role="data" />
+   <file baseinstalldir="/" name="LICENSE" role="data" />
+   <file baseinstalldir="/" name="README" role="data" />
+   
+   <file baseinstalldir="" name="PHPFrame_CLI_Tool/Executable.php" role="script">
+    <tasks:replace from="/usr/bin/env php" to="php_bin" type="pear-config" />
+    <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+  </file>
+  
+  <file baseinstalldir="" name="PHPFrame_CLI_Tool.php" role="php">
+    <tasks:replace from="/usr/bin/env php" to="php_bin" type="pear-config" />
+    <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+    <tasks:postinstallscript>
+     <tasks:paramgroup>
+      <tasks:id>db</tasks:id>
+      <tasks:param>
+   	   <tasks:name>DB_DRIVER</tasks:name>
+       <tasks:prompt>Database driver for phpframe command line tool (MySQL, SQLite, ...)</tasks:prompt>
+       <tasks:type>string</tasks:type>
+       <tasks:default>MySQL</tasks:default>
+      </tasks:param>
+      <tasks:param>
+   	   <tasks:name>DB_HOST</tasks:name>
+       <tasks:prompt>Database host for phpframe command line tool (normally "localhost")</tasks:prompt>
+       <tasks:type>string</tasks:type>
+       <tasks:default>localhost</tasks:default>
+      </tasks:param>
+      <tasks:param>
+   	   <tasks:name>DB_USER</tasks:name>
+       <tasks:prompt>Database user for phpframe command line tool</tasks:prompt>
+       <tasks:type>string</tasks:type>
+       <tasks:default>phpframe-cli</tasks:default>
+      </tasks:param>
+      <tasks:param>
+   	   <tasks:name>DB_PASS</tasks:name>
+       <tasks:prompt>Database password for phpframe command line tool</tasks:prompt>
+       <tasks:type>string</tasks:type>
+      </tasks:param>
+      <tasks:param>
+   	   <tasks:name>DB_NAME</tasks:name>
+       <tasks:prompt>Database name for phpframe command line tool</tasks:prompt>
+       <tasks:type>string</tasks:type>
+       <tasks:default>phpframe-cli</tasks:default>
+      </tasks:param>
+      <tasks:param>
+   	   <tasks:name>DB_ROOT</tasks:name>
+       <tasks:prompt>Database server root user (only needed if you want the installer to create the user for you).</tasks:prompt>
+       <tasks:type>string</tasks:type>
+       <tasks:default>root</tasks:default>
+      </tasks:param>
+      <tasks:param>
+   	   <tasks:name>DB_ROOT_PASS</tasks:name>
+       <tasks:prompt>Database server root password (only needed if you want the installer to create the user for you).</tasks:prompt>
+       <tasks:type>string</tasks:type>
+       <tasks:default></tasks:default>
+      </tasks:param>
+     </tasks:paramgroup>
+    </tasks:postinstallscript>
+  </file>
+
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+   	<name>Config</name>
+   	<channel>pear.php.net</channel>
+   	<min>1.10.11</min>
+   </package>
+   <extension>
+	<name>reflection</name>
+   </extension>
+   <extension>
+	<name>spl</name>
+   </extension>
+   <extension>
+	<name>pdo</name>
+   </extension>
+   <extension>
+    <name>pdo_mysql</name>
+   </extension>
+   <extension>
+    <name>json</name>
+   </extension>
+   <extension>
+    <name>gd</name>
+   </extension>
+   <extension>
+    <name>filter</name>
+   </extension>
+   <extension>
+    <name>imap</name>
+   </extension>
+  </required>
+  <optional>
+   <package>
+	<name>PHPUnit</name>
+	<channel>pear.phpunit.de</channel>
+	<min>3.3.16</min>
+   </package>
+   <package>
+    <name>phing</name>
+	<channel>pear.phing.info</channel>
+	<min>2.3.3</min>
+   </package>
+   <extension>
+    <name>xdebug</name>
+    <min>2.0.4</min>
+   </extension>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install as="phpframe" name="PHPFrame_CLI_Tool/Executable.php" />
+  </filelist>
+ </phprelease>
+ <changelog>
+  <release>
+   <version>
+    <release>##RELEASE_VERSION##</release>
+    <api>##API_VERSION##</api>
+   </version>
+   <stability>
+    <release>##RELEASE_STABILITY##</release>
+    <api>##API_STABILITY##</api>
+   </stability>
+   <date>##DATE##</date>
+   <license uri="##LICENSE_URI##">##LICENSE##</license>
+   <notes>##NOTES##</notes>
+  </release>
+ </changelog>
+</package>
