@@ -99,8 +99,10 @@ class PHPFrame_Client_Mobile implements PHPFrame_Client_IClient
             $input = file_get_contents("php://input");
             $post = json_decode($input, true);
 
-            //add this post body to the our model of request
-            $request['request'] = array_merge($request['request'], $post);
+            if (is_array($post)) {
+                //add this post body to the our model of request
+                $request['request'] = array_merge($request['request'], $post);
+            }
         }
             
         // Once the superglobal request arrays are processed we unset them
