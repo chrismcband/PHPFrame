@@ -198,7 +198,7 @@ class PHPFrame_Database_IdObject
     public function select($fields)
     {
         // Validate input type and set internal property
-        $pattern = "/^[a-zA-Z_ \.\*\(\)\#]+$/";
+        $pattern = "/^[a-zA-Z_ \.\*\(\)\#]+\d*$/";
         $fields = PHPFrame_Utils_Filter::validateRegExp($fields, $pattern);
         
         if (is_string($fields)) {
