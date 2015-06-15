@@ -111,14 +111,14 @@ class PHPFrame_Utils_Rewrite
                         $action == 'members' || $action == 'users' ||
                         $action == 'rooms' || $action == 'invites' ||
                         $action == 'requests' || $action == 'icons' ||
-                        $action == 'events'
+                        $action == 'events' || $action == 'contextviews'
                     ) {
-                        preg_match('/^api\/(notes|messages|work|members|users|invites|requests|icons|events)\/(\d+)/', $params, $noteid_matches);
+                        preg_match('/^api\/(notes|messages|work|members|users|invites|requests|icons|events|contextviews)\/(\d+)/', $params, $noteid_matches);
                         if (isset($noteid_matches[2])) {
                             $_REQUEST['id'] = $noteid_matches[2];
                             $_GET['id'] = $noteid_matches[2];
                         }
-                        preg_match('/^api\/(notes|messages|work|members|users|invites|requests|icons|events)\/(\d+)\/([a-zA-Z\/]+)/', $params, $path_matches);
+                        preg_match('/^api\/(notes|messages|work|members|users|invites|requests|icons|events|contextviews)\/(\d+)\/([a-zA-Z\/]+)/', $params, $path_matches);
                         if (isset($path_matches[3])) {
                             $_REQUEST['subpath'] = $path_matches[3];
                             $_GET['subpath'] = $path_matches[3];
