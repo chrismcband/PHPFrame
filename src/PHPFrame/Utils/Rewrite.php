@@ -113,14 +113,14 @@ class PHPFrame_Utils_Rewrite
                         $action == 'requests' || $action == 'icons' ||
                         $action == 'events' || $action == 'contextviews' ||
                         $action == 'questions' || $action == 'questionchoices' ||
-                        $action == 'questionanswers' || $action == 'workquestions'
+                        $action == 'questionanswers'
                     ) {
-                        preg_match('/^api\/(notes|messages|work|members|users|invites|requests|icons|events|contextviews|questions|questionchoices|questionanswers|workquestions)\/(\d+)/', $params, $noteid_matches);
+                        preg_match('/^api\/(notes|messages|work|members|users|invites|requests|icons|events|contextviews|questions|questionchoices|questionanswers)\/(\d+)/', $params, $noteid_matches);
                         if (isset($noteid_matches[2])) {
                             $_REQUEST['id'] = $noteid_matches[2];
                             $_GET['id'] = $noteid_matches[2];
                         }
-                        preg_match('/^api\/(notes|messages|work|members|users|invites|requests|icons|events|contextviews|questions|questionchoices|questionanswers|workquestions)\/(\d+)\/([a-zA-Z\/]+)/', $params, $path_matches);
+                        preg_match('/^api\/(notes|messages|work|members|users|invites|requests|icons|events|contextviews|questions|questionchoices|questionanswers)\/(\d+)\/([a-zA-Z\/]+)/', $params, $path_matches);
                         if (isset($path_matches[3])) {
                             $_REQUEST['subpath'] = $path_matches[3];
                             $_GET['subpath'] = $path_matches[3];
