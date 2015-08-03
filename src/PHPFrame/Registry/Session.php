@@ -541,7 +541,7 @@ class PHPFrame_Registry_Session extends PHPFrame_Registry
 	{
 		// Build array with available clients
 		//TODO: This should be read from directory
-		$available_clients = array("CLI", "Mobile", "XMLRPC", "Default");
+		$available_clients = array("CLI", "Mobile", "Default");
 
 		//loop through files
 		foreach ($available_clients as $client) {
