@@ -100,6 +100,8 @@ class PHPFrame_HTMLDocument extends PHPFrame_XMLDocument
 
         // Get default doctype if not passed
         $this->doctype($doctype);
+
+        $this->useBeautifier(false);
     }
 
     /**
