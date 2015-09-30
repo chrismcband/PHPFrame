@@ -109,7 +109,7 @@ class PHPFrame_InputFilter
      */
     private function _processString($str)
     {
-//        $str = urldecode($str);
+        $str = rawurldecode($str);
 
         $patterns = array();
         $replacements = array();

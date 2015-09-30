@@ -53,13 +53,13 @@ class PHPFrame_DefaultClient extends PHPFrame_Client
         $inputfilter = new PHPFrame_InputFilter();
 
         //if this is a GET request, urldecode params
-        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-            foreach ($_REQUEST as $key=>$value) {
-                if (!is_array($value) && !is_object($value)) {
-                    $_REQUEST[$key] = urldecode($value);
-                }
-            }
-        }
+//        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+//            foreach ($_REQUEST as $key=>$value) {
+//                if (!is_array($value) && !is_object($value)) {
+//                    $_REQUEST[$key] = urldecode($value);
+//                }
+//            }
+//        }
 
         // Process incoming request arrays and store filtered data in class
         $filtered_request = $inputfilter->process($_REQUEST);
