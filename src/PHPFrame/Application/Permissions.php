@@ -60,6 +60,8 @@ class PHPFrame_Application_Permissions
      */
     public function authorise($component, $action) 
     {
+        $user = PHPFrame::Session()->getUser();
+
         PHPFrame_Debug_Logger::write("Checking permission for $component.$action for userid ".PHPFrame::Session()->getUserId()." groupid ".PHPFrame::Session()->getGroupId());
         //check session user perm actions still valid
         $perm_session_user = PHPFrame::Session()->get('perms_acl_userid', 0);
@@ -71,6 +73,15 @@ class PHPFrame_Application_Permissions
             $this->_acl = $this->_loadACL(PHPFrame::Session()->getUser());
             PHPFrame::Session()->set('perms_acl_userid', PHPFrame::Session()->getUserId());
             PHPFrame::Session()->set('perms_acl_groupid', PHPFrame::Session()->getGroupId());
+        }
+
+        // check if additional flags are present to skip permission checks
+        try{
+            if ($user->is_staff || $user->is_superuser) {
+                return true;
+            }
+        } catch (PHPFrame_Exception $e) {
+            // this portal must not have the additional user flags installed, proceed to do permissions check
         }
 
         PHPFrame_Debug_Logger::write("Allowed: ".print_r((isset($this->_acl[$component]) 
