@@ -62,12 +62,13 @@ class PHPFrame_Application_Permissions
     {
         $user = PHPFrame::Session()->getUser();
 
-        PHPFrame_Debug_Logger::write("Checking permission for $component.$action for userid ".PHPFrame::Session()->getUserId()." groupid ".PHPFrame::Session()->getGroupId());
+//        PHPFrame_Debug_Logger::write("Checking permission for $component.$action for userid ".PHPFrame::Session()->getUserId()." groupid ".PHPFrame::Session()->getGroupId());
+
         //check session user perm actions still valid
         $perm_session_user = PHPFrame::Session()->get('perms_acl_userid', 0);
         $perm_session_group = PHPFrame::Session()->get('perms_acl_groupid', 0);
         
-        PHPFrame_Debug_Logger::write("perm_session_user is $perm_session_user, perm_session_group is $perm_session_group");
+//        PHPFrame_Debug_Logger::write("perm_session_user is $perm_session_user, perm_session_group is $perm_session_group");
         if (empty($this->_acl) || $perm_session_user != PHPFrame::Session()->getUserId()
             || $perm_session_group != PHPFrame::Session()->getGroupId()){
             $this->_acl = $this->_loadACL(PHPFrame::Session()->getUser());
@@ -84,8 +85,8 @@ class PHPFrame_Application_Permissions
             // this portal must not have the additional user flags installed, proceed to do permissions check
         }
 
-        PHPFrame_Debug_Logger::write("Allowed: ".print_r((isset($this->_acl[$component]) 
-            && array_search($action, $this->_acl[$component]) !== FALSE), true));
+//        PHPFrame_Debug_Logger::write("Allowed: ".print_r((isset($this->_acl[$component])
+//            && array_search($action, $this->_acl[$component]) !== FALSE), true));
         
         return (isset($this->_acl[$component]) 
             && array_search($action, $this->_acl[$component]) !== FALSE);
