@@ -110,6 +110,7 @@ class PHPFrame_Utils_Rewrite
                         $action == 'messages' || $action == 'work') ||
                         $action == 'members' || $action == 'users' ||
                         $action == 'rooms' || $action == 'invites' ||
+                        $action == 'roominvites' || $action == 'worldinvites' ||
                         $action == 'requests' || $action == 'icons' ||
                         $action == 'events' || $action == 'contextviews' ||
                         $action == 'questions' || $action == 'questionchoices' ||
@@ -118,12 +119,12 @@ class PHPFrame_Utils_Rewrite
                         $action == 'roomcontentmedia' || $action == 'posts' ||
                         $action == 'images' || $action == 'stickers'
                     ) {
-                        preg_match('/^api\/(notes|messages|work|members|users|contacts|contactlists|contentmedia|roomcontentmedia|posts|invites|requests|icons|images|stickers|events|contextviews|questions|questionchoices|questionanswers)\/(\d+)/', $params, $noteid_matches);
+                        preg_match('/^api\/(notes|messages|work|members|users|contacts|contactlists|contentmedia|roomcontentmedia|posts|invites|roominvites|worldinvites|requests|icons|images|stickers|events|contextviews|questions|questionchoices|questionanswers)\/(\d+)/', $params, $noteid_matches);
                         if (isset($noteid_matches[2])) {
                             $_REQUEST['id'] = $noteid_matches[2];
                             $_GET['id'] = $noteid_matches[2];
                         } else {
-                            preg_match('/^api\/(notes|messages|work|members|users|contacts|contactlists|contentmedia|roomcontentmedia|posts|invites|requests|icons|images|stickers|events|contextviews|questions|questionchoices|questionanswers)\/([a-zA-Z\/\_]+)/', $params, $subpath_matches);
+                            preg_match('/^api\/(notes|messages|work|members|users|contacts|contactlists|contentmedia|roomcontentmedia|posts|invites|roominvites|worldinvites|requests|icons|images|stickers|events|contextviews|questions|questionchoices|questionanswers)\/([a-zA-Z\/\_]+)/', $params, $subpath_matches);
                             if (isset($subpath_matches[2])) {
                                 $_REQUEST['subpath'] = $subpath_matches[2];
                                 $_GET['subpath'] = $subpath_matches[2];
