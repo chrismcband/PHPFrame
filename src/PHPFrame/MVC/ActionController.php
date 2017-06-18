@@ -260,7 +260,7 @@ abstract class PHPFrame_MVC_ActionController extends PHPFrame_Base_Subject
             	}
             } else {
             	PHPFrame_Debug_Logger::write("Not authorized to run $component.$action, session is authorised though.");
-            	$this->sysevents->setSummary('Permission denied.');
+//            	$this->sysevents->setSummary('Permission denied.');
             	PHPFrame::Request()->setComponentName('com_users');
             	$view = PHPFrame_MVC_Factory::getView('permissions', 'denied');
             	$view->display();
