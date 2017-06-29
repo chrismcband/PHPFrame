@@ -538,6 +538,20 @@ class PHPFrame_Document_HTML extends PHPFrame_Document_XML
 
         $this->addInlineScript($script_content);
     }
+
+    /**
+     * Gets the first found individual element in the dom by tag name.
+     * This can be used for very custom manipulation of the dom,
+     * e.g. to set a custom body class
+     *
+     * @param string $tag_name the name of the tag e.g. 'body'
+     * @return DOMNode
+     */
+    function getElement($tag_name) {
+        $node = $this->dom->getElementsByTagName($tag_name)->item(0);
+
+        return $node;
+    }
     
     /**
      * Attach external stylesheet
