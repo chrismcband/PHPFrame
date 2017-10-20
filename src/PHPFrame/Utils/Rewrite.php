@@ -80,7 +80,7 @@ class PHPFrame_Utils_Rewrite
                         $_REQUEST['roomid'] = $roomid_matches[1];
                         $_GET['roomid'] = $roomid_matches[1];
                     }
-                } else if ($component == 'com_home') {
+                } else if ($component === 'com_home' || $component === 'com_info') {
                     //ignore any action for com_home controller, this is mostly
                     //backbone which handles push state urls
                     unset($action);
