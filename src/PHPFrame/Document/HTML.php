@@ -62,6 +62,9 @@ class PHPFrame_Document_HTML extends PHPFrame_Document_XML
         
         // Get root node
         $html_node = $this->dom->getElementsByTagName("html")->item(0);
+
+        // add og prefix to html node
+        $this->addNodeAttr($html_node, 'prefix', 'og: http://ogp.me/ns#');
         
         // Add head
         $head_node = $this->addNode($html_node, "head");
