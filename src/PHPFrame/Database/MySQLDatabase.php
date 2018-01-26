@@ -38,6 +38,7 @@ class PHPFrame_MySQLDatabase extends PHPFrame_Database
         parent::connect();
 
         $this->getPDO()->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+        $this->getPDO()->setAttribute(PDO::MYSQL_ATTR_FOUND_ROWS, true);
     }
 
     /**
