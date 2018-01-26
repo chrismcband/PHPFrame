@@ -149,7 +149,7 @@ class PHPFrame_SQLPersistentObjectAssembler
         $db     = $this->factory->getDB();
 
         $stmt = $db->query($sql, $params);
-        if ($build_query_method = "buildUpdateQuery"
+        if ($build_query_method == "buildUpdateQuery"
             && $stmt->rowCount() == 0
         ) {
             $sql = $this->buildInsertQuery(iterator_to_array($obj));
