@@ -148,13 +148,7 @@ class PHPFrame_SQLPersistentObjectAssembler
         $params = $this->buildQueryParams(iterator_to_array($obj));
         $db     = $this->factory->getDB();
 
-        $stmt = $db->query($sql, $params);
-        if ($build_query_method == "buildUpdateQuery"
-            && $stmt->rowCount() == 0
-        ) {
-            $sql = $this->buildInsertQuery(iterator_to_array($obj));
-            $stmt = $db->query($sql, $params);
-        }
+        $db->query($sql, $params);
 
         if ($obj->id() <= 0) {
             $obj->id($db->lastInsertId());
