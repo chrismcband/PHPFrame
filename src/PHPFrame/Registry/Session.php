@@ -107,7 +107,7 @@ class PHPFrame_Registry_Session extends PHPFrame_Registry
 //		$this->_cookie_domain = $uri->getHost();
 //PHPFrame_Debug_Logger::write("COOKIE DOMAIN: ".$this->_cookie_domain);
 // HACK TO SET COOKIE DOMAIN
-		$this->_cookie_domain = ".stickyworld.com";
+		$this->_cookie_domain = ".confers.com";
 //PHPFrame_Debug_Logger::write("COOKIE DOMAIN: ".$this->_cookie_domain);
 		
 		// Set custom session name
