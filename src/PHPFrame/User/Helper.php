@@ -40,7 +40,7 @@ class PHPFrame_User_Helper
      */
     public static function fullname_format($firstname, $lastname) 
     {
-        $str = strtoupper(substr($firstname,0,1)).". ".ucwords($lastname);
+        $str = strtoupper(mb_substr($firstname,0,1, 'UTF-8')).". ".ucwords($lastname);
                 
         return $str;
     }
